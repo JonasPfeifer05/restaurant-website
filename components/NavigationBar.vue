@@ -4,8 +4,13 @@
 
 <template>
   <nav id="navbar">
-    <div id="name">
-      Gasthaus Posch
+    <div id="title">
+      <div id="title">
+        Gasthaus Posch
+      </div>
+      <div id="subtitle">
+        Essen mit Liebe
+      </div>
     </div>
     <button id="menu-button">
       <Icon id="menu-icon" name="material-symbols:menu" />
@@ -17,10 +22,35 @@
 #navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
-  height: 75px;
+  height: 90px;
 
   padding: 15px;
   box-sizing: border-box;
+
+  #title {
+    #title {
+      font-size: 32px;
+    }
+    #subtitle {
+      font-size: 16px
+    }
+  }
+
+  #menu-button {
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    background: none;
+
+    padding: 4px;
+
+    #menu-icon {
+      width: 32px;
+      height: 32px;
+    }
+  }
 }
 </style>
