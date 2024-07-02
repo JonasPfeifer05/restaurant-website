@@ -11,16 +11,19 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@iconify-json/material-symbols": "^1.1.82",
     "@nuxt/fonts": "^0.7.1",
+    "@nuxt/icon": "^1.0.0",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/i18n": "^8.3.1",
     "@pinia/nuxt": "^0.5.1",
     "eslint": "^8.28.0",
     "nuxt": "^3.12.2",
+    "nuxt-icon": "^1.0.0-beta.7",
+    "pinia": "^2.1.7",
     "vue": "latest"
   },
   "devDependencies": {
-    "@iconify-json/material-symbols": "^1.1.82",
     "sass": "^1.77.6"
   }
 }
