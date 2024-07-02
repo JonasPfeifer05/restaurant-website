@@ -2,5 +2,11 @@
 </script>
 
 <template>
-  <NavigationBar />
+  <div style="display: contents">
+    <NavigationBar />
+    <LandingPage />
+  </div>
 </template>
+
+<style scoped>
+</style>
