@@ -96,7 +96,7 @@ const sliderTranslate = computed(() => {
 
 <style scoped lang="scss">
 .slider-sized-h {
-  height: calc(100vh - 90px);
+  height: calc(100dvh - 90px);
 }
 
 .slider-sized-w {
