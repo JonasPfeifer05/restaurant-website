@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import NavigationMenu from "~/components/NavigationMenu.vue";
+
 const navigationStore = useNavigationStore();
 
 function virtualBodyClicked() {
@@ -15,7 +17,7 @@ function virtualBodyClicked() {
           <LandingPage />
         </div>
       </div>
-      <div id="settings-menu" />
+      <NavigationMenu />
     </div>
   </div>
 </template>
@@ -39,12 +41,6 @@ function virtualBodyClicked() {
       &.disable-virtual-body {
         pointer-events: none;
       }
-    }
-
-    #settings-menu {
-      min-width: 70vw;
-      height: 100dvh;
-      background-color: red;
     }
   }
 }

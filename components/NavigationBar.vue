@@ -27,6 +27,7 @@ const navigationStore = useNavigationStore()
   height: 90px;
 
   padding: 15px;
+  border-bottom: 1px lightgrey solid;
   box-sizing: border-box;
 
   #title {
