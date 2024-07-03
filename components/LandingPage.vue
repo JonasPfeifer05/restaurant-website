@@ -141,8 +141,8 @@ const sliderTranslate = computed(() => {
     top: 50%;
     transform: translateY(-50%);
 
-    height: 64px;
-    width: 64px;
+    height: 48px;
+    width: 48px;
 
     padding: 0;
     margin: 0;
