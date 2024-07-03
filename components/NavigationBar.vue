@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+const navigationStore = useNavigationStore()
 </script>
 
 <template>
@@ -12,7 +12,7 @@
         Essen mit Liebe
       </div>
     </div>
-    <button id="menu-button">
+    <button id="menu-button" @click="navigationStore.toggle">
       <Icon id="menu-icon" name="material-symbols:menu" />
     </button>
   </nav>
@@ -46,6 +46,7 @@
     background: none;
 
     padding: 4px;
+    pointer-events: all;
 
     #menu-icon {
       width: 32px;

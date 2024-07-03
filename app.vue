@@ -8,9 +8,6 @@ function virtualBodyClicked() {
 
 <template>
   <div id="app-viewport">
-    <button style="position: absolute; z-index: 100" @click="navigationStore.toggle">
-      Settings
-    </button>
     <div id="app-content" :class="{ 'settings-opened': navigationStore.opened }">
       <div id="virtual-body-wrapper" @click="virtualBodyClicked">
         <div id="virtual-body" :class="{ 'disable-virtual-body': navigationStore.opened }">
