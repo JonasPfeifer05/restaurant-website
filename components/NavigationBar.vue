@@ -13,7 +13,7 @@ const navigationStore = useNavigationStore()
       </div>
     </div>
     <button id="menu-button" @click="navigationStore.toggle">
-      <Icon id="menu-icon" name="material-symbols:menu" />
+      <Icon id="menu-icon" name="material-symbols:menu" color="black" />
     </button>
   </nav>
 </template>

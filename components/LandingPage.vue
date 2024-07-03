@@ -75,10 +75,10 @@ const sliderTranslate = computed(() => {
       </div>
     </div>
     <button id="left-button" class="navigation-button" @touchstart.stop @click="moveLeft">
-      <Icon name="material-symbols:chevron-left-rounded" />
+      <Icon name="material-symbols:chevron-left-rounded" color="black" />
     </button>
     <button id="right-button" class="navigation-button" @touchstart.stop @click="moveRight">
-      <Icon name="material-symbols:chevron-right-rounded" />
+      <Icon name="material-symbols:chevron-right-rounded" color="black" />
     </button>
     <div
       id="slider-content"
