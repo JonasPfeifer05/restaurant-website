@@ -1,9 +1,5 @@
 <script setup lang="ts">
-const settingsOpened = ref(false)
-
-function settings () {
-  settingsOpened.value = !settingsOpened.value
-}
+const navigationStore = useNavigationStore();
 
 function virtualBodyClicked() {
   console.log("clicked")
@@ -12,12 +8,12 @@ function virtualBodyClicked() {
 
 <template>
   <div id="app-viewport">
-    <button style="position: absolute; z-index: 100" @click="settings">
+    <button style="position: absolute; z-index: 100" @click="navigationStore.toggle">
       Settings
     </button>
-    <div id="app-content" :class="{ 'open-settings': settingsOpened }">
+    <div id="app-content" :class="{ 'settings-opened': navigationStore.opened }">
       <div id="virtual-body-wrapper" @click="virtualBodyClicked">
-        <div id="virtual-body" :class="{ 'disable-virtual-body': settingsOpened }">
+        <div id="virtual-body" :class="{ 'disable-virtual-body': navigationStore.opened }">
           <NavigationBar />
           <LandingPage />
         </div>
@@ -36,7 +32,7 @@ function virtualBodyClicked() {
 
     transition: transform 1s;
 
-    &.open-settings {
+    &.settings-opened {
       transform: translateX(-70vw);
     }
 

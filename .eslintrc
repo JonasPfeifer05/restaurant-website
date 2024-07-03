@@ -3,6 +3,9 @@
     "@nuxtjs/eslint-config-typescript"
   ],
   "rules": {
-    "no-console": "off"
+    "no-console": "off",
+    "indent": "off",
+    "space-before-function-paren": "off",
+    "quotes": "off"
   }
 }
