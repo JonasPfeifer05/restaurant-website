@@ -96,11 +96,13 @@ const sliderTranslate = computed(() => {
 
 <style scoped lang="scss">
 .slider-sized-h {
-  height: calc(100dvh - 90px);
+  min-height: calc(100dvh - 90px);
+  max-height: calc(100dvh - 90px);
 }
 
 .slider-sized-w {
-  width: 100vw;
+  min-width: 100vw;
+  max-width: 100vw;
 }
 
 #slider-window {
