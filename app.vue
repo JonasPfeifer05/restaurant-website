@@ -4,17 +4,23 @@ const settingsOpened = ref(false)
 function settings () {
   settingsOpened.value = !settingsOpened.value
 }
+
+function virtualBodyClicked() {
+  console.log("clicked")
+}
 </script>
 
 <template>
   <div id="app-viewport">
-    <button style="position: absolute; z-index: 1" @click="settings">
+    <button style="position: absolute; z-index: 100" @click="settings">
       Settings
     </button>
     <div id="app-content" :class="{ 'open-settings': settingsOpened }">
-      <div id="virtual-body">
-        <NavigationBar />
-        <LandingPage />
+      <div id="virtual-body-wrapper" @click="virtualBodyClicked">
+        <div id="virtual-body" :class="{ 'disable-virtual-body': settingsOpened }">
+          <NavigationBar />
+          <LandingPage />
+        </div>
       </div>
       <div id="settings-menu" />
     </div>
@@ -36,6 +42,10 @@ function settings () {
 
     #virtual-body {
       display: block;
+
+      &.disable-virtual-body {
+        pointer-events: none;
+      }
     }
 
     #settings-menu {
