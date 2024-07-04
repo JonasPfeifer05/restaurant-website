@@ -101,8 +101,8 @@ const sliderTranslate = computed(() => {
 }
 
 .slider-sized-w {
-  min-width: 100vw;
-  max-width: 100vw;
+  min-width: 100dvw;
+  max-width: 100dvw;
 }
 
 #slider-window {
