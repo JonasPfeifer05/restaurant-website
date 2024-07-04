@@ -75,10 +75,10 @@ const sliderTranslate = computed(() => {
       </div>
     </div>
     <button id="left-button" class="navigation-button" @touchstart.stop @click="moveLeft">
-      <Icon name="material-symbols:chevron-left-rounded" color="black" />
+      <Icon name="material-symbols:chevron-left-rounded" mode="svg" color="black" />
     </button>
     <button id="right-button" class="navigation-button" @touchstart.stop @click="moveRight">
-      <Icon name="material-symbols:chevron-right-rounded" color="black" />
+      <Icon name="material-symbols:chevron-right-rounded" mode="svg" color="black" />
     </button>
     <div
       id="slider-content"
@@ -155,7 +155,7 @@ const sliderTranslate = computed(() => {
 
     cursor: pointer;
 
-    span {
+    svg {
       height: 100%;
       width: 100%;
 
