@@ -75,10 +75,10 @@ const sliderTranslate = computed(() => {
       </div>
     </div>
     <button id="left-button" class="navigation-button" @touchstart.stop @click="moveLeft">
-      <Icon name="material-symbols:chevron-left-rounded" mode="svg" color="black" />
+      <Icon name="material-symbols:chevron-left-rounded" mode="svg" />
     </button>
     <button id="right-button" class="navigation-button" @touchstart.stop @click="moveRight">
-      <Icon name="material-symbols:chevron-right-rounded" mode="svg" color="black" />
+      <Icon name="material-symbols:chevron-right-rounded" mode="svg" />
     </button>
     <div
       id="slider-content"
