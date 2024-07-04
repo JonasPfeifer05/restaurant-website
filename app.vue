@@ -1,29 +1,32 @@
 <script setup lang="ts">
 import NavigationMenu from "~/components/NavigationMenu.vue";
+import {useNavigationStore} from "~/stores/navigationStore";
 
-const navigationStore = useNavigationStore();
+const navigationStore = useNavigationStore()
 
 function virtualBodyClicked() {
-  console.log("clicked")
+  // navigationStore.set(false)
 }
 </script>
 
 <template>
   <div id="app-viewport">
-    <div id="app-content" :class="{ 'settings-opened': navigationStore.opened }">
-      <div id="virtual-body-wrapper" @click="virtualBodyClicked">
-        <div id="virtual-body" :class="{ 'disable-virtual-body': navigationStore.opened }">
-          <NavigationBar />
-          <LandingPage />
-        </div>
+    <NavigationBar/>
+    <NavigationMenu/>
+    <div id="app-content" :class="{ 'settings-opened': navigationStore.opened }" @click="virtualBodyClicked">
+      <div id="virtual-body" :class="{ 'disable-virtual-body': navigationStore.opened }">
+        <LandingPage/>
+        <LandingPage/>
       </div>
-      <NavigationMenu />
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
+
+
 #app-viewport {
+  display: unset;
   overflow-x: hidden;
 
   #app-content {
@@ -31,12 +34,10 @@ function virtualBodyClicked() {
 
     transition: transform 1s;
 
-    &.settings-opened {
-      transform: translateX(-70vw);
-    }
-
     #virtual-body {
       display: block;
+
+      margin-top: 90px;
 
       &.disable-virtual-body {
         pointer-events: none;

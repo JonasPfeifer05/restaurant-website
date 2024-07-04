@@ -6,6 +6,8 @@
     "no-console": "off",
     "indent": "off",
     "space-before-function-paren": "off",
-    "quotes": "off"
+    "quotes": "off",
+    "object-curly-spacing": "off",
+    "vue/html-closing-bracket-spacing": "off"
   }
 }

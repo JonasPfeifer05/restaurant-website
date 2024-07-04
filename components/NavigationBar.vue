@@ -3,7 +3,7 @@ const navigationStore = useNavigationStore()
 </script>
 
 <template>
-  <nav id="navbar">
+  <nav id="navbar" :class="{ 'settings-opened': navigationStore.opened }">
     <div id="title">
       <div id="title">
         Gasthaus Posch
@@ -20,15 +20,24 @@ const navigationStore = useNavigationStore()
 
 <style scoped>
 #navbar {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   height: 90px;
+  width: 100%;
+
+  background-color: white;
 
   padding: 15px;
   border-bottom: 1px lightgrey solid;
   box-sizing: border-box;
+
+  transition: transform 1s;
 
   #title {
     #title {
@@ -48,6 +57,8 @@ const navigationStore = useNavigationStore()
 
     padding: 4px;
     pointer-events: all;
+
+    cursor: pointer;
 
     #menu-icon {
       width: 32px;

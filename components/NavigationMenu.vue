@@ -1,32 +1,49 @@
 <script setup lang="ts">
+const navigationStore = useNavigationStore()
 
+const sections = [
+  "Unser Traum",
+  "Gasthaus",
+  "Latenight Bar",
+  "Darstellung",
+  "Hygene",
+  "Kreationen",
+  "Kinder",
+  "Design",
+  "Online-Shop",
+  "Feiern mieten",
+  "Übernachtungen"
+]
 </script>
 
 <template>
-  <div id="navigation-menu">
-    <div id="heading">Alles über uns!</div>
+  <div id="navigation-menu" :class="{ 'hidden': !navigationStore.opened }">
+    <div id="heading">
+      Alles über uns!
+    </div>
     <div id="anchors">
-      <div>Ein gemeinsamer Traum</div>
-      <div>Das Gasthaus</div>
-      <div>Schon spät? Besuch unsere latenight Bar</div>
-      <div>Ein Schmauß für die Augen!</div>
-      <div>Immer alles blitz blank!</div>
-      <div>Kreativität ohne Ende!</div>
-      <div>Egal ob Groß oder Klein!</div>
-      <div>Grandioses Design!</div>
-      <div>Ist die Couch zu bequem? Dann bestell Online!</div>
-      <div>Eine Feier in Planung? Melde dich!</div>
-      <div>Zu betrunken? Dann schlaf bei uns!</div>
+      <button v-for="section in sections" :key="section" @click="navigationStore.set(false)">
+        {{ section }}
+      </button>
     </div>
   </div>
 </template>
 
 <style scoped lang="scss">
+.hidden {
+  transform: translateX(70vw);
+}
+
 #navigation-menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 2;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 48px;
 
   min-width: 70vw;
   height: 100dvh;
@@ -34,6 +51,9 @@
   padding: 16px;
   border-left: 1px lightgrey solid;
   box-sizing: border-box;
+
+  background-color: white;
+  transition: transform 1s;
 
   #heading {
     width: 100%;
@@ -46,10 +66,21 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 8px;
+    gap: 32px;
 
-    div {
+    button {
+      border: none;
+      background: transparent;
+
+      font-size: 18px;
+
       text-align: center;
+
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }

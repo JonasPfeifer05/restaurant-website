@@ -5,8 +5,20 @@
 body, html {
   margin: 0;
   padding: 0;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  overflow-x: hidden;
 }
 
 img {
   display: block;
+}
+
+.menu-opened {
+  transform: translateX(-70vw);
 }

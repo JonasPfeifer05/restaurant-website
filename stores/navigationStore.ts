@@ -9,6 +9,9 @@ export const useNavigationStore = defineStore('NavigationStore', {
     actions: {
         toggle() {
             this.opened = !this.opened
+        },
+        set(value: boolean) {
+            this.opened = value
         }
     }
 })

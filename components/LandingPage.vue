@@ -153,6 +153,8 @@ const sliderTranslate = computed(() => {
     border-radius: 50%;
     border: none;
 
+    cursor: pointer;
+
     span {
       height: 100%;
       width: 100%;
