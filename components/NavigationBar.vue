@@ -3,7 +3,7 @@ const navigationStore = useNavigationStore()
 </script>
 
 <template>
-  <nav id="navbar" :class="{ 'settings-opened': navigationStore.opened }">
+  <nav id="navbar" :class="{ 'menu-opened': navigationStore.opened }">
     <div id="title">
       <div id="title">
         Gasthaus Posch

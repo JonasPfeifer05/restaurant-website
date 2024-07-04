@@ -13,7 +13,7 @@ function virtualBodyClicked() {
   <div id="app-viewport">
     <NavigationBar/>
     <NavigationMenu/>
-    <div id="app-content" :class="{ 'settings-opened': navigationStore.opened }" @click="virtualBodyClicked">
+    <div id="app-content" :class="{ 'menu-opened': navigationStore.opened }" @click="virtualBodyClicked">
       <div id="virtual-body" :class="{ 'disable-virtual-body': navigationStore.opened }">
         <LandingPage/>
         <LandingPage/>
