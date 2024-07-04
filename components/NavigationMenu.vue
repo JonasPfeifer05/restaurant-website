@@ -46,7 +46,7 @@ const sections = [
   gap: 32px;
 
   width: 70svw;
-  height: 100svh;
+  height: 100dvh;
 
   padding: 16px;
   border-left: 1px lightgrey solid;
