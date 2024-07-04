@@ -31,7 +31,7 @@ const sections = [
 
 <style scoped lang="scss">
 .hidden {
-  transform: translateX(70dvw);
+  transform: translateX(70svw);
 }
 
 #navigation-menu {
@@ -45,8 +45,8 @@ const sections = [
   align-items: center;
   gap: 32px;
 
-  width: 70dvw;
-  height: 100dvh;
+  width: 70svw;
+  height: 100svh;
 
   padding: 16px;
   border-left: 1px lightgrey solid;
