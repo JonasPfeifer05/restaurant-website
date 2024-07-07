@@ -18,11 +18,11 @@ const sections = [
 
 <template>
   <div id="navigation-menu" :class="{ 'hidden': !navigationStore.opened }">
-    <div id="heading">
+    <div id="heading" class="title-medium">
       Alles über uns!
     </div>
     <div id="anchors">
-      <button v-for="section in sections" :key="section" @click="navigationStore.set(false)">
+      <button class="text-medium" v-for="section in sections" :key="section" @click="navigationStore.set(false)">
         {{ section }}
       </button>
     </div>
@@ -58,7 +58,6 @@ const sections = [
   #heading {
     width: 100%;
 
-    font-size: 35px;
     text-align: center;
   }
 
@@ -71,8 +70,6 @@ const sections = [
     button {
       border: none;
       background: transparent;
-
-      font-size: 18px;
 
       text-align: center;
 

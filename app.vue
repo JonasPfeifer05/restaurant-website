@@ -15,8 +15,8 @@ function virtualBodyClicked() {
     <NavigationMenu/>
     <div id="app-content" :class="{ 'menu-opened': navigationStore.opened }" @click="virtualBodyClicked">
       <div id="virtual-body" :class="{ 'disable-virtual-body': navigationStore.opened }">
-        <LandingPage/>
-        <LandingPage/>
+        <LandingSlide/>
+        <OurDream/>
       </div>
     </div>
   </div>

@@ -5,10 +5,10 @@ const navigationStore = useNavigationStore()
 <template>
   <nav id="navbar" :class="{ 'menu-opened': navigationStore.opened }">
     <div id="title">
-      <div id="title">
+      <div id="title" class="title-medium">
         Gasthaus Posch
       </div>
-      <div id="subtitle">
+      <div id="subtitle" class="text-medium">
         Essen mit Liebe
       </div>
     </div>
@@ -38,15 +38,6 @@ const navigationStore = useNavigationStore()
   box-sizing: border-box;
 
   transition: transform 1s;
-
-  #title {
-    #title {
-      font-size: 32px;
-    }
-    #subtitle {
-      font-size: 16px
-    }
-  }
 
   #menu-button {
     width: 40px;

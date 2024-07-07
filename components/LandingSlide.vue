@@ -68,9 +68,9 @@ const sliderTranslate = computed(() => {
     @touchend="dragEnd"
     @dragend="dragEnd"
   >
-    <div id="slider-title">
+    <div id="slider-title" class="title-large">
       Willkommen im Gasthaus Posch
-      <div id="slider-sub-title">
+      <div id="slider-sub-title" class="text-large">
         Wo Essen mit Liebe entsteht
       </div>
     </div>
@@ -123,16 +123,10 @@ const sliderTranslate = computed(() => {
     text-align: center;
 
     color: black;
-    font-size: 38px;
-    font-weight: bold;
 
     background-color: rgba(255, 255, 255, 0.9);
     padding: 8px;
 
-    #slider-sub-title {
-      font-size: 24px;
-      font-weight: normal;
-    }
   }
 
   .navigation-button {
