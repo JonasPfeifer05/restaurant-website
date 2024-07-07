@@ -4,6 +4,7 @@
 
 <template>
   <div>
+    <div id="our-dream-anchor"/>
     <div id="title" class="title-medium">Unser Traum</div>
     <div>
       <div id="who-are-we" class="title-small section-header">Wer sind wir?</div>
@@ -45,6 +46,11 @@
 </template>
 
 <style scoped lang="scss">
+#our-dream-anchor {
+  scroll-margin-top: 90px;
+  height: 1px;
+}
+
 #title {
   margin: 32px 0 24px 0;
   text-align: center;

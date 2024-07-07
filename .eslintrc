@@ -8,6 +8,7 @@
     "space-before-function-paren": "off",
     "quotes": "off",
     "object-curly-spacing": "off",
-    "vue/html-closing-bracket-spacing": "off"
+    "vue/html-closing-bracket-spacing": "off",
+    "quote-props": "off"
   }
 }

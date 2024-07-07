@@ -2,17 +2,17 @@
 const navigationStore = useNavigationStore()
 
 const sections = [
-  "Unser Traum",
-  "Gasthaus",
-  "Latenight Bar",
-  "Darstellung",
-  "Hygene",
-  "Kreationen",
-  "Kinder",
-  "Design",
-  "Online-Shop",
-  "Feiern mieten",
-  "Übernachtungen"
+  ["Unser Traum", "#our-dream-anchor"],
+  ["Gasthaus"],
+  ["Latenight Bar"],
+  ["Darstellung"],
+  ["Hygene"],
+  ["Kreationen"],
+  ["Kinder"],
+  ["Design"],
+  ["Online-Shop"],
+  ["Feiern mieten"],
+  ["Übernachtungen"]
 ]
 </script>
 
@@ -22,9 +22,9 @@ const sections = [
       Alles über uns!
     </div>
     <div id="anchors">
-      <button class="text-medium" v-for="section in sections" :key="section" @click="navigationStore.set(false)">
-        {{ section }}
-      </button>
+      <a v-for="section in sections" :key="section[0]" :href="section[1]" class="text-medium" @click="navigationStore.set(false)">
+        {{ section[0] }}
+      </a>
     </div>
   </div>
 </template>
@@ -67,13 +67,14 @@ const sections = [
     align-items: center;
     gap: 24px;
 
-    button {
+    a {
       border: none;
       background: transparent;
 
       text-align: center;
 
       cursor: pointer;
+      text-decoration: none;
 
       &:hover {
         text-decoration: underline;
